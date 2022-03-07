@@ -3,8 +3,8 @@
 namespace ZnDatabase\Doctrine\Domain\Helpers\QueryBuilder;
 
 use Illuminate\Database\Query\Builder;
-use ZnLib\Db\Helpers\DbHelper;
-use ZnLib\Db\Interfaces\QueryBuilderInterface;
+use ZnDatabase\Base\Domain\Helpers\DbHelper;
+use ZnDatabase\Base\Domain\Interfaces\QueryBuilderInterface;
 use ZnCore\Domain\Enums\OperatorEnum;
 use ZnCore\Domain\Libs\Query;
 use ZnCore\Domain\Entities\Query\Where;

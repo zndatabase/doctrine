@@ -71,7 +71,8 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
     {
         $query = $this->forgeQuery($query);
         $queryFilter = $this->queryFilterInstance($query);
-        $queryWithoutRelations = $queryFilter->getQueryWithoutRelations();
+//        $queryWithoutRelations = $queryFilter->getQueryWithoutRelations();
+        $queryWithoutRelations = $query;
         $collection = $this->_all($queryWithoutRelations);
         $collection = $queryFilter->loadRelations($collection);
         return $collection;

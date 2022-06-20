@@ -16,7 +16,7 @@ use ZnCore\Base\Libs\Query\Entities\Query;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnDatabase\Doctrine\Domain\Helpers\QueryBuilder\DoctrineQueryBuilderHelper;
-use ZnDatabase\Base\Domain\Libs\QueryFilter;
+use ZnCore\Base\Libs\Relation\Libs\QueryFilter;
 
 abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository implements CrudRepositoryInterface//, RelationConfigInterface
 {

@@ -7,6 +7,7 @@ use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Driver\PDOStatement;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
+use ZnCore\Base\Libs\Entity\Helpers\CollectionHelper;
 use ZnCore\Base\Libs\Entity\Helpers\EntityHelper;
 use ZnCore\Domain\Interfaces\GetEntityClassInterface;
 use ZnDatabase\Base\Domain\Traits\TableNameTrait;
@@ -81,7 +82,7 @@ abstract class BaseDoctrineRepository implements GetEntityClassInterface
         //return $this->forgeEntityCollection($array);
 
         $entityClass = $this->getEntityClass();
-        return EntityHelper::createEntityCollection($entityClass, $array);
+        return CollectionHelper::create($entityClass, $array);
     }
 
     protected function countByBuilder(QueryBuilder $queryBuilder): int

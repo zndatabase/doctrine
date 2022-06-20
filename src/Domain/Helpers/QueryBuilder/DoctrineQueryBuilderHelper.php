@@ -5,9 +5,9 @@ namespace ZnDatabase\Doctrine\Domain\Helpers\QueryBuilder;
 use Illuminate\Database\Query\Builder;
 use ZnDatabase\Base\Domain\Helpers\DbHelper;
 use ZnDatabase\Base\Domain\Interfaces\QueryBuilderInterface;
-use ZnCore\Domain\Enums\OperatorEnum;
-use ZnCore\Domain\Libs\Query;
-use ZnCore\Domain\Entities\Query\Where;
+use ZnCore\Base\Libs\Query\Enums\OperatorEnum;
+use ZnCore\Base\Libs\Query\Entities\Query;
+use ZnCore\Base\Libs\Query\Entities\Where;
 use Doctrine\DBAL\Query\QueryBuilder;
 
 class DoctrineQueryBuilderHelper implements QueryBuilderInterface

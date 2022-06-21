@@ -9,7 +9,7 @@ use ZnCore\Base\Exceptions\InvalidMethodParameterException;
 use ZnCore\Base\Libs\Query\Enums\OperatorEnum;
 use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
 use ZnCore\Base\Libs\Entity\Helpers\EntityHelper;
-use ZnCore\Contract\Domain\Interfaces\Entities\EntityIdInterface;
+use ZnCore\Base\Libs\Entity\Interfaces\EntityIdInterface;
 use ZnCore\Base\Libs\Repository\Interfaces\CrudRepositoryInterface;
 //use ZnCore\Base\Libs\Repository\Interfaces\RelationConfigInterface;
 use ZnCore\Base\Libs\Query\Entities\Query;

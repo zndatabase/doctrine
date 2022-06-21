@@ -5,6 +5,7 @@ namespace ZnDatabase\Doctrine\Domain\Base;
 use Doctrine\DBAL\Driver\PDOStatement;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Enumerable;
 use ZnCore\Base\Exceptions\InvalidMethodParameterException;
 use ZnCore\Base\Libs\Query\Enums\OperatorEnum;
 use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
@@ -67,7 +68,7 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
         return $collection;
     }
 
-    public function all(Query $query = null)
+    public function all(Query $query = null): Enumerable
     {
         $query = $this->forgeQuery($query);
         $queryFilter = $this->queryFilterInstance($query);

@@ -9,7 +9,7 @@ use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
 use ZnCore\Base\Libs\Entity\Helpers\CollectionHelper;
 use ZnCore\Base\Libs\Entity\Helpers\EntityHelper;
-use ZnCore\Domain\Interfaces\GetEntityClassInterface;
+use ZnCore\Base\Libs\Domain\Interfaces\GetEntityClassInterface;
 use ZnDatabase\Base\Domain\Traits\TableNameTrait;
 
 abstract class BaseDoctrineRepository implements GetEntityClassInterface

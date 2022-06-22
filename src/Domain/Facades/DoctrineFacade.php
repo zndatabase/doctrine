@@ -5,20 +5,18 @@ namespace ZnDatabase\Doctrine\Domain\Facades;
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
-use ZnCore\Base\Libs\DotEnv\DotEnv;
-use ZnCore\Base\Libs\DotEnv\DotEnvFacade;
+use ZnCore\Base\Libs\DotEnv\Libs\DotEnvMap;
 use ZnDatabase\Base\Domain\Helpers\ConfigHelper;
-use ZnDatabase\Base\Domain\Helpers\DbHelper;
 
 class DoctrineFacade
 {
 
     public static function createConnection(): Connection
     {
-        if(isset($_ENV['DATABASE_URL'])) {
+        if (isset($_ENV['DATABASE_URL'])) {
             $dbconfig = ConfigHelper::parseDsn($_ENV['DATABASE_URL']);
         } else {
-            $dbconfig = DotEnvFacade::get('db');
+            $dbconfig = DotEnvMap::get('db');
         }
         $connectionConfig = [
             'dbname' => $dbconfig['database'] ?? $dbconfig['dbname'],

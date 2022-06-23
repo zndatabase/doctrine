@@ -5,7 +5,7 @@ namespace ZnDatabase\Doctrine\Domain\Facades;
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
-use ZnCore\Base\Libs\DotEnv\Domain\Libs\DotEnvMap;
+use ZnCore\Base\DotEnv\Domain\Libs\DotEnvMap;
 use ZnDatabase\Base\Domain\Helpers\ConfigHelper;
 
 class DoctrineFacade

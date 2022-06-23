@@ -8,14 +8,14 @@ use Illuminate\Database\QueryException;
 use Illuminate\Support\Enumerable;
 use ZnCore\Contract\Common\Exceptions\InvalidMethodParameterException;
 use ZnCore\Domain\Query\Enums\OperatorEnum;
-use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
 use ZnCore\Domain\Entity\Helpers\EntityHelper;
 use ZnCore\Domain\Entity\Interfaces\EntityIdInterface;
 use ZnCore\Domain\Repository\Interfaces\CrudRepositoryInterface;
 //use ZnCore\Domain\Repository\Interfaces\RelationConfigInterface;
 use ZnCore\Domain\Query\Entities\Query;
 use ZnCore\Domain\Entity\Exceptions\NotFoundException;
-use ZnCore\Base\Libs\Arr\Helpers\ArrayHelper;
+use ZnCore\Base\Arr\Helpers\ArrayHelper;
 use ZnDatabase\Doctrine\Domain\Helpers\QueryBuilder\DoctrineQueryBuilderHelper;
 use ZnCore\Domain\Relation\Libs\QueryFilter;
 

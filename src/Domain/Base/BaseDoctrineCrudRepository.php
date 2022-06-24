@@ -24,11 +24,6 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
 
     protected $primaryKey = ['id'];
 
-    /*public function _relations()
-    {
-        return [];
-    }*/
-
     public function primaryKey()
     {
         return $this->primaryKey;

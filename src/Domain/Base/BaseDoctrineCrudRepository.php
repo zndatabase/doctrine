@@ -88,7 +88,7 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
     public function one(Query $query = null)
     {
         $query->limit(1);
-        $collection = $this->all($query);
+        $collection = $this->findAll($query);
         if ($collection->count() < 1) {
             throw new NotFoundException('Not found entity!');
         }

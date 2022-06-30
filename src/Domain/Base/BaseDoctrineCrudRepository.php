@@ -74,7 +74,7 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
         return $collection;
     }
 
-    public function oneById($id, Query $query = null): EntityIdInterface
+    public function findOneById($id, Query $query = null): EntityIdInterface
     {
         if(empty($id)) {
             throw (new InvalidMethodParameterException('Empty ID'))
@@ -153,7 +153,7 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
 
     public function update(EntityIdInterface $entity)
     {
-        $this->oneById($entity->getId());
+        $this->findOneById($entity->getId());
         $data = EntityHelper::toArrayForTablize($entity);
         $this->updateQuery($entity->getId(), $data);
         //$this->updateById($entity->getId(), $data);
@@ -161,7 +161,7 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
 
     /*public function updateById($id, $data)
     {
-        $this->oneById($id);
+        $this->findOneById($id);
         $this->updateQuery($id, $data);
     }*/
 
@@ -176,7 +176,7 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
 
     public function deleteById($id)
     {
-        $entity = $this->oneById($id);
+        $entity = $this->findOneById($id);
         $queryBuilder = $this->getQueryBuilder();
         $predicates = $queryBuilder->expr()->andX();
         $predicates->add($queryBuilder->expr()->eq('id', $entity->getId()));

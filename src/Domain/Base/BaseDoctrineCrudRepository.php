@@ -63,7 +63,7 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
         return $collection;
     }
 
-    public function all(Query $query = null): Enumerable
+    public function findAll(Query $query = null): Enumerable
     {
         $query = $this->forgeQuery($query);
         $queryFilter = $this->queryFilterInstance($query);

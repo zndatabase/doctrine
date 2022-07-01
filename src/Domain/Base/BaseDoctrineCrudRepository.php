@@ -82,10 +82,10 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
         }
         $query = $this->forgeQuery($query);
         $query->where('id', $id);
-        return $this->one($query);
+        return $this->findOne($query);
     }
 
-    public function one(Query $query = null)
+    public function findOne(Query $query = null): object
     {
         $query->limit(1);
         $collection = $this->findAll($query);

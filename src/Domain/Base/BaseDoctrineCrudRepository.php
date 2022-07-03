@@ -5,7 +5,7 @@ namespace ZnDatabase\Doctrine\Domain\Base;
 use Doctrine\DBAL\Driver\PDOStatement;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Illuminate\Database\QueryException;
-use Illuminate\Support\Enumerable;
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 use ZnCore\Contract\Common\Exceptions\InvalidMethodParameterException;
 use ZnCore\Domain\Query\Enums\OperatorEnum;
 use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;

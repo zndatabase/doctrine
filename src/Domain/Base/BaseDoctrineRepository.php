@@ -7,8 +7,8 @@ use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Driver\PDOStatement;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
-use ZnCore\Domain\Entity\Helpers\CollectionHelper;
-use ZnCore\Domain\Entity\Helpers\EntityHelper;
+use ZnCore\Entity\Helpers\CollectionHelper;
+use ZnCore\Entity\Helpers\EntityHelper;
 use ZnCore\Domain\Domain\Interfaces\GetEntityClassInterface;
 use ZnDatabase\Base\Domain\Traits\TableNameTrait;
 

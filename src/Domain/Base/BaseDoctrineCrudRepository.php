@@ -7,17 +7,17 @@ use Doctrine\DBAL\Query\QueryBuilder;
 use Illuminate\Database\QueryException;
 use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\Contract\Common\Exceptions\InvalidMethodParameterException;
-use ZnCore\Domain\Query\Enums\OperatorEnum;
+use ZnCore\Query\Enums\OperatorEnum;
 use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
 use ZnCore\Entity\Helpers\EntityHelper;
 use ZnCore\Entity\Interfaces\EntityIdInterface;
-use ZnCore\Domain\Repository\Interfaces\CrudRepositoryInterface;
-//use ZnCore\Domain\Repository\Interfaces\RelationConfigInterface;
-use ZnCore\Domain\Query\Entities\Query;
+use ZnCore\Repository\Interfaces\CrudRepositoryInterface;
+//use ZnCore\Repository\Interfaces\RelationConfigInterface;
+use ZnCore\Query\Entities\Query;
 use ZnCore\Entity\Exceptions\NotFoundException;
-use ZnCore\Base\Arr\Helpers\ArrayHelper;
+use ZnCore\Arr\Helpers\ArrayHelper;
 use ZnDatabase\Doctrine\Domain\Helpers\QueryBuilder\DoctrineQueryBuilderHelper;
-use ZnCore\Domain\Relation\Libs\QueryFilter;
+use ZnCore\Relation\Libs\QueryFilter;
 
 abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository implements CrudRepositoryInterface//, RelationConfigInterface
 {

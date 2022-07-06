@@ -29,7 +29,7 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
         return $this->primaryKey;
     }
 
-    protected function forgeQuery(Query $query = null)
+    protected function forgeQuery(Query $query = null): Query
     {
         $query = Query::forge($query);
         return $query;

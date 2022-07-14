@@ -11,13 +11,13 @@ use ZnCore\Query\Enums\OperatorEnum;
 use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
 use ZnCore\Entity\Helpers\EntityHelper;
 use ZnCore\Entity\Interfaces\EntityIdInterface;
-use ZnCore\Repository\Interfaces\CrudRepositoryInterface;
-//use ZnCore\Repository\Interfaces\RelationConfigInterface;
+use ZnDomain\Repository\Interfaces\CrudRepositoryInterface;
+//use ZnDomain\Repository\Interfaces\RelationConfigInterface;
 use ZnCore\Query\Entities\Query;
 use ZnCore\Entity\Exceptions\NotFoundException;
 use ZnCore\Arr\Helpers\ArrayHelper;
 use ZnDatabase\Doctrine\Domain\Helpers\QueryBuilder\DoctrineQueryBuilderHelper;
-use ZnCore\Relation\Libs\QueryFilter;
+use ZnDomain\Relation\Libs\QueryFilter;
 
 abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository implements CrudRepositoryInterface//, RelationConfigInterface
 {

@@ -14,7 +14,7 @@ use ZnDomain\Entity\Interfaces\EntityIdInterface;
 use ZnDomain\Repository\Interfaces\CrudRepositoryInterface;
 //use ZnDomain\Repository\Interfaces\RelationConfigInterface;
 use ZnDomain\Query\Entities\Query;
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 use ZnCore\Arr\Helpers\ArrayHelper;
 use ZnDatabase\Doctrine\Domain\Helpers\QueryBuilder\DoctrineQueryBuilderHelper;
 use ZnDomain\Relation\Libs\QueryFilter;
